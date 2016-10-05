@@ -82,7 +82,7 @@ def call(body) {
             }
         },
         "spec": {
-            "replicas": 1,
+            "replicas": 2,
             "selector": {
                 "component": "${env.JOB_NAME}",
                 "container": "${config.label}",
@@ -128,7 +128,7 @@ def call(body) {
                             ],
                             "resources": {},
                             "terminationMessagePath": "/dev/termination-log",
-                            "imagePullPolicy": "IfNotPresent",
+                            "imagePullPolicy": "Always",
                             "securityContext": {}
                         }
                     ],
